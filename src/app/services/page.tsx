@@ -106,7 +106,7 @@ export default function Services() {
               Ready to Get Started?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
-              Let's discuss how we can help bring your vision to life with our expertise and experience.
+              Let&apos;s discuss how we can help bring your vision to life with our expertise and experience.
             </p>
             <a
               href="/contact"

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import Testimonials from '@/components/Testimonials';
@@ -115,7 +114,7 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
-              Let's discuss how we can help bring your vision to life with our expertise and experience.
+              Let&apos;s discuss how we can help bring your vision to life with our expertise and experience.
             </p>
             <Link
               href="/contact"
