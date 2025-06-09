@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hide Next.js development tool */
+#nextjs-toast-errors-parent {
+  display: none !important;
+}
+
+/* Hide Next.js logo */
+#__next-build-watcher {
+  display: none !important;
+}
