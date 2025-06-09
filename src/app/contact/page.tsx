@@ -43,7 +43,7 @@ ${formData.message}
     `.trim();
 
     // Create mailto link
-    const mailtoLink = `mailto:madmadhu64@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:emmpacsolutions@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
     
     // Open default email client
     window.location.href = mailtoLink;
