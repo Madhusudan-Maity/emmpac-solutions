@@ -36,7 +36,7 @@ const footerSections: FooterSection[] = [
     title: 'Contact',
     links: [
       { name: 'Phone: +918877000030', href: 'tel:+918877000030' },
-      { name: 'Email: madmadhu64@gmail.com', href: 'mailto:madmadhu64@gmail.com' },
+      { name: 'Email: emmpacsolutions@gmail.com', href: 'mailto:emmpacsolutions@gmail.com' },
       { name: 'Address: Purulia, West Bengal', href: '/contact' },
     ],
   },
