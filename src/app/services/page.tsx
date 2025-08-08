@@ -43,12 +43,12 @@ export default function Services() {
     <main className="pt-20">
       {/* Hero Section */}
       <AnimatedSection>
-        <section className="bg-gray-100 dark:bg-gray-800 py-20">
+        <section className="bg-gray-100 dark:bg-gray-800 py-4 md:py-6">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#4169E1] dark:text-[#1E3A8A]">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-[#4169E1] dark:text-[#2cf0c1]">
               Our Services
             </h1>
-            <p className="text-xl text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Comprehensive solutions for construction, training, and media production needs
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function Services() {
                 <AnimatedSection key={index} delay={0.15 + index * 0.05}>
                   <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
                     <div className="text-5xl mb-6">{service.icon}</div>
-                    <h3 className="text-2xl font-semibold mb-4 text-[#4169E1] dark:text-[#1E3A8A]">
+                    <h3 className="text-2xl font-semibold mb-4 text-[#4169E1] dark:text-[#2cf0c1]">
                       {service.title}
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -100,7 +100,7 @@ export default function Services() {
 
       {/* CTA Section */}
       <AnimatedSection delay={0.2}>
-        <section className="py-20 bg-[#4169E1] dark:bg-[#1E3A8A]">
+        <section className="py-20 bg-[#4169E1] dark:bg-[#2cf0c1]">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Ready to Get Started?

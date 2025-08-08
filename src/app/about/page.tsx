@@ -1,13 +1,14 @@
 'use client';
 
 import AnimatedSection from '@/components/AnimatedSection';
+import Image from 'next/image';
 
 const team = [
   {
-    name: 'John Doe',
+    name: 'Surya Kanta Mahata',
     role: 'CEO & Founder',
-    image: '/team/ceo.jpg',
-    bio: 'With over 20 years of experience in the industry, John leads our company with vision and expertise.'
+    image: '/images/surya_ceo.jpeg',
+    bio: 'With 15 years of experience in this industry, Surya leads our company with vision and expertise.'
   },
   {
     name: 'Jane Smith',
@@ -51,12 +52,12 @@ export default function About() {
     <main className="pt-20">
       {/* Hero Section */}
       <AnimatedSection>
-        <section className="bg-gray-100 dark:bg-gray-800 py-20">
+        <section className="bg-gray-100 dark:bg-gray-800 py-4 md:py-6">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#4169E1] dark:text-[#1E3A8A]">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-[#4169E1] dark:text-[#2cf0c1]">
               About EMMPAC Solutions
             </h1>
-            <p className="text-xl text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               Building a sustainable future through innovation and excellence
             </p>
           </div>
@@ -68,7 +69,7 @@ export default function About() {
         <section className="py-20 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center text-[#4169E1] dark:text-[#1E3A8A]">
+              <h2 className="text-3xl font-bold mb-8 text-center text-[#4169E1] dark:text-[#2cf0c1]">
                 Our Story
               </h2>
               <div className="prose prose-lg dark:prose-invert mx-auto">
@@ -96,7 +97,7 @@ export default function About() {
       <AnimatedSection delay={0.2}>
         <section className="py-20 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#4169E1] dark:text-[#1E3A8A]">
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#4169E1] dark:text-[#2cf0c1]">
               Our Values
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -104,7 +105,7 @@ export default function About() {
                 <AnimatedSection key={index} delay={0.3 + index * 0.1}>
                   <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
                     <div className="text-4xl mb-4">{value.icon}</div>
-                    <h3 className="text-xl font-semibold mb-3 text-[#4169E1] dark:text-[#1E3A8A]">
+                    <h3 className="text-xl font-semibold mb-3 text-[#4169E1] dark:text-[#2cf0c1]">
                       {value.title}
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300">
@@ -122,7 +123,7 @@ export default function About() {
       <AnimatedSection delay={0.3}>
         <section className="py-20 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center text-[#4169E1] dark:text-[#1E3A8A]">
+            <h2 className="text-3xl font-bold mb-12 text-center text-[#4169E1] dark:text-[#2cf0c1]">
               Our Leadership Team
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -130,12 +131,25 @@ export default function About() {
                 <AnimatedSection key={index} delay={0.4 + index * 0.1}>
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                     <div className="aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-700">
-                      <div className="w-full h-48 bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
-                        <span className="text-4xl">👤</span>
+                      <div className="w-full h-48 bg-gray-300 dark:bg-gray-600 flex items-center justify-center overflow-hidden relative">
+                        {member.image ? (
+                          <Image 
+                            src={member.image}
+                            alt={member.name}
+                            width={300}
+                            height={192}
+                            className="w-full h-full object-cover"
+                            onError={() => {
+                              // Fallback handled by Next.js automatically
+                            }}
+                          />
+                        ) : (
+                          <span className="text-4xl">👤</span>
+                        )}
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold mb-2 text-[#4169E1] dark:text-[#1E3A8A]">
+                      <h3 className="text-xl font-semibold mb-2 text-[#4169E1] dark:text-[#2cf0c1]">
                         {member.name}
                       </h3>
                       <p className="text-gray-600 dark:text-gray-400 mb-4">
@@ -155,7 +169,7 @@ export default function About() {
 
       {/* CTA Section */}
       <AnimatedSection delay={0.4}>
-        <section className="py-20 bg-[#4169E1] dark:bg-[#1E3A8A]">
+        <section className="py-20 bg-[#4169E1] dark:bg-[#2cf0c1]">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Join Us in Building the Future

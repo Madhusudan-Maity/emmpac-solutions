@@ -34,8 +34,8 @@ export default function JumpToTop() {
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
       } ${
         theme === 'dark'
-          ? 'bg-blue-600 hover:bg-blue-700 text-white'
-          : 'bg-white hover:bg-gray-100 text-blue-700'
+          ? 'bg-cyan-600 hover:bg-cyan-700 text-white'
+          : 'bg-white hover:bg-gray-100 text-cyan-700'
       }`}
       aria-label="Jump to top"
     >

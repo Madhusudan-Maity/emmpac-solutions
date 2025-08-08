@@ -1,43 +1,21 @@
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
 import Testimonials from '@/components/Testimonials';
+import ProjectGallery from '@/components/ProjectGallery';
+import HeroCollage from '@/components/HeroCollage';
+import { getFeaturedImages } from '@/data/projectImages';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Hero Section */}
-      <AnimatedSection>
-        <section className="relative h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-          <div className="container mx-auto px-4 z-20 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#4169E1] dark:text-[#1E3A8A]">
-              EMMPAC SOLUTIONS
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-700 dark:text-gray-300">
-              Complete Glee Under One Roof
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Link 
-                href="/services" 
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold transition-colors shadow-lg"
-              >
-                Our Services
-              </Link>
-              <Link 
-                href="/contact" 
-                className="bg-[#4169E1] hover:bg-[#1E3A8A] text-white px-8 py-3 rounded-full font-semibold transition-colors shadow-lg"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </section>
-      </AnimatedSection>
+      {/* Hero Section with Collage Background */}
+      <HeroCollage />
 
       {/* Services Preview Section */}
       <AnimatedSection delay={0.1}>
         <section className="py-20 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-[#4169E1] dark:text-[#1E3A8A]">Our Services</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-[#4169E1] dark:text-[#2cf0c1]">Our Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -59,7 +37,7 @@ export default function Home() {
                 <AnimatedSection key={index} delay={0.15 + index * 0.05}>
                   <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700">
                     <div className="text-4xl mb-4">{service.icon}</div>
-                    <h3 className="text-xl font-semibold mb-3 text-[#4169E1] dark:text-[#1E3A8A]">{service.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-[#4169E1] dark:text-[#2cf0c1]">{service.title}</h3>
                     <p className="text-gray-700 dark:text-gray-300">{service.description}</p>
                   </div>
                 </AnimatedSection>
@@ -95,7 +73,7 @@ export default function Home() {
               ].map((feature, index) => (
                 <AnimatedSection key={index} delay={0.15 + index * 0.05}>
                   <div className="text-center p-6 bg-white dark:bg-gray-700 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-600 transition-colors">
-                    <h3 className="text-xl font-semibold mb-3 text-[#4169E1] dark:text-[#1E3A8A]">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold mb-3 text-[#4169E1] dark:text-[#2cf0c1]">{feature.title}</h3>
                     <p className="text-gray-700 dark:text-gray-300">{feature.description}</p>
                   </div>
                 </AnimatedSection>
@@ -105,12 +83,20 @@ export default function Home() {
         </section>
       </AnimatedSection>
 
+      {/* Featured Projects Section */}
+      <ProjectGallery 
+        images={getFeaturedImages(6)}
+        title="Featured Projects"
+        subtitle="A glimpse of our recent work and successful client collaborations"
+        columns={3}
+      />
+
       {/* Add Testimonials section before the CTA section */}
       <Testimonials />
 
       {/* CTA Section */}
       <AnimatedSection delay={0.1}>
-        <section className="py-20 bg-[#4169E1] dark:bg-[#1E3A8A] text-white">
+        <section className="py-20 bg-[#4169E1] dark:bg-[#09a88c] text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">Ready to Get Started?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
@@ -118,7 +104,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-3 rounded-full font-semibold transition-colors shadow-lg"
+              className="inline-block bg-yellow-400 hover:bg-blue-500 text-gray-900 px-8 py-3 rounded-full font-semibold transition-colors shadow-lg"
             >
               Contact Us Today
             </Link>

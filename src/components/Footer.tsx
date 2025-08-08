@@ -28,7 +28,7 @@ const footerSections: FooterSection[] = [
     links: [
       { name: 'Civil Construction', href: '/services#civil' },
       { name: 'Electrical Works', href: '/services#electrical' },
-      { name: 'Plumbing', href: '/services#plumbing' },
+      { name: 'Documentary', href: '/services#documentary' },
       { name: 'Interior Design', href: '/services#interior' },
     ],
   },
@@ -88,7 +88,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} EMMPAC Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Developed by Madhusudan Maity. All rights reserved.</p>
         </div>
       </div>
     </footer>

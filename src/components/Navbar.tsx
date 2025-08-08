@@ -9,7 +9,7 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="bg-[#4169E1] dark:bg-[#1E3A8A] shadow-lg fixed w-full z-50">
+    <nav className="bg-[#4169E1] dark:bg-[#09a88c] shadow-lg fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -110,7 +110,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#4169E1] dark:bg-[#1E3A8A] shadow-lg">
+        <div className="md:hidden bg-[#4169E1] dark:bg-[#2cf0c1] shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"

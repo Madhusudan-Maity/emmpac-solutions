@@ -48,7 +48,7 @@ export default function Testimonials() {
     <section className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <AnimatedSection>
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#4169E1] dark:text-[#1E3A8A]">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#4169E1] dark:text-[#2cf0c1]">
             What Our Clients Say
           </h2>
         </AnimatedSection>
@@ -70,7 +70,7 @@ export default function Testimonials() {
                             <span className="text-2xl">👤</span>
                           </div>
                           <div className="ml-4">
-                            <h3 className="text-xl font-semibold text-[#4169E1] dark:text-[#1E3A8A]">
+                            <h3 className="text-xl font-semibold text-[#4169E1] dark:text-[#2cf0c1]">
                               {testimonial.name}
                             </h3>
                             <p className="text-gray-600 dark:text-gray-400">
@@ -100,7 +100,7 @@ export default function Testimonials() {
               aria-label="Previous testimonial"
             >
               <svg
-                className="w-6 h-6 text-[#4169E1] dark:text-[#1E3A8A]"
+                className="w-6 h-6 text-[#4169E1] dark:text-[#2cf0c1]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -119,7 +119,7 @@ export default function Testimonials() {
               aria-label="Next testimonial"
             >
               <svg
-                className="w-6 h-6 text-[#4169E1] dark:text-[#1E3A8A]"
+                className="w-6 h-6 text-[#4169E1] dark:text-[#2cf0c1]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -142,7 +142,7 @@ export default function Testimonials() {
                 onClick={() => setActiveIndex(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
                   index === activeIndex
-                    ? 'bg-[#4169E1] dark:bg-[#1E3A8A]'
+                    ? 'bg-[#4169E1] dark:bg-[#2cf0c1]'
                     : 'bg-gray-300 dark:bg-gray-600'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
