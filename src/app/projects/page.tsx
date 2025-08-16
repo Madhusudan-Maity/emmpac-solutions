@@ -9,7 +9,7 @@ export default function Projects() {
     <main className="pt-20">
       {/* Hero Section */}
       <AnimatedSection>
-        <section className="bg-gray-100 dark:bg-gray-800 py-4 md:py-6">
+        <section className="bg-gray-100 dark:bg-gray-800 py-3 md:py-4">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-[#4169E1] dark:text-[#2cf0c1]">
               Our Projects
@@ -31,7 +31,7 @@ export default function Projects() {
 
       {/* CTA Section */}
       <AnimatedSection delay={0.2}>
-        <section className="py-12 bg-[#4169E1] dark:bg-[#2cf0c1]">
+        <section className="py-12 bg-[#4169E1] dark:bg-[#2aa48e]">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Have a Project in Mind?

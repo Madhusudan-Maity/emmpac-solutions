@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import AnimatedSection from '@/components/AnimatedSection';
 
@@ -7,34 +7,111 @@ const services = [
     title: 'Constructions and Consultancy',
     description: 'From DPR to Completion with modern technology and product-based solutions.',
     features: [
-      'Structural Health Check',
-      'Waterproofing Solutions',
+      'DPR, Planning & Design',
       'Construction Management',
-      'Technical Consultancy'
+      'Technical Consultancy',
+      'Quality Assurance & Supervision'
     ],
     icon: '🏗️'
   },
   {
-    title: 'Awareness Activities & Training',
+    title: 'Structural Health Check',
+    description: 'Comprehensive structural evaluation including pile testing and stability checks.',
+    features: [
+      'Pile Testing',
+      'Stability & Deflection Analysis',
+      'Non-destructive Testing',
+      'Detailed Inspection Reports'
+    ],
+    icon: '🧪'
+  },
+  {
+    title: 'Waterproofing, Repair & Retrofit',
+    description: 'Waterproofing, grouting, coatings and retrofitting solutions to extend asset life.',
+    features: [
+      'Seamless Waterproofing',
+      'Structural Retrofitting',
+      'Grouting & Coatings',
+      'Crack Repair & Strengthening'
+    ],
+    icon: '💧'
+  },
+  {
+    title: 'Specialized Construction Solutions',
+    description: 'Restoration, microconcreting, guniting and other specialty techniques for complex jobs.',
+    features: [
+      'Structural Restoration',
+      'Microconcreting & Guniting',
+      'Insulation & Sound Proofing',
+      'Green-rated Building Solutions'
+    ],
+    icon: '🔧'
+  },
+  {
+    title: 'Awareness Activities, Training & Capacity Building',
     description: 'Knowledge upgradation, skill development, and capacity building programs.',
     features: [
       'Professional Training',
-      'Workshop Organization',
-      'Skill Development',
-      'Capacity Building'
+      'Workshops & Seminars',
+      'Skill Development Programs',
+      'Tailored Capacity Building'
     ],
     icon: '📚'
+  },
+  {
+    title: 'Consultancy & Third Party Inspection',
+    description: 'Independent third-party inspection, technical audits and consultancy services.',
+    features: [
+      'Third Party Inspection',
+      'Technical Audits',
+      'Compliance & QA/QC',
+      'Testing & Certification'
+    ],
+    icon: '🔍'
+  },
+  {
+    title: 'Thunder & Lightning Protection',
+    description: 'Design and installation of lightning protection and earthing systems to safeguard life and assets.',
+    features: [
+      'Risk Assessment',
+      'Protection System Design',
+      'Installation & Testing',
+      'Maintenance Plans'
+    ],
+    icon: '⚡'
   },
   {
     title: 'Media Productions',
     description: 'Documentaries, short films, feature films, and music albums production.',
     features: [
       'Documentary Production',
-      'Short Film Making',
-      'Feature Films',
-      'Music Albums'
+      'Short & Feature Film Production',
+      'Music Albums & Advertisements',
+      'Festival & Distribution Support'
     ],
     icon: '🎥'
+  },
+  {
+    title: 'Event Management',
+    description: 'End-to-end event planning and management for cultural, promotional and industry events.',
+    features: [
+      'Event Planning & Promotion',
+      'Festival & Film Event Management',
+      'Logistics & On-ground Execution',
+      'Stage & Technical Services'
+    ],
+    icon: '�'
+  },
+  {
+    title: 'Waste Management',
+    description: 'Comprehensive waste management solutions for various industries.',
+    features: [
+      'Waste Collection & Disposal',
+      'Recycling & Resource Recovery',
+      'Hazardous Waste Management',
+      'Consultancy & Compliance'
+    ],
+    icon: '♻️'
   }
 ];
 
@@ -43,7 +120,7 @@ export default function Services() {
     <main className="pt-20">
       {/* Hero Section */}
       <AnimatedSection>
-        <section className="bg-gray-100 dark:bg-gray-800 py-4 md:py-6">
+        <section className="bg-gray-100 dark:bg-gray-800 py-3 md:py-4">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-[#4169E1] dark:text-[#2cf0c1]">
               Our Services
@@ -55,13 +132,13 @@ export default function Services() {
         </section>
       </AnimatedSection>
 
-      {/* Services Grid */}
-      <AnimatedSection delay={0.1}>
-        <section className="py-20 bg-white dark:bg-gray-900">
+  {/* Services Grid */}
+  <AnimatedSection delay={0.1} alwaysVisible>
+        <section className="py-8 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <AnimatedSection key={index} delay={0.15 + index * 0.05}>
+        <AnimatedSection key={index} delay={0.15 + index * 0.05} alwaysVisible>
                   <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-200 dark:border-gray-700">
                     <div className="text-5xl mb-6">{service.icon}</div>
                     <h3 className="text-2xl font-semibold mb-4 text-[#4169E1] dark:text-[#2cf0c1]">
@@ -100,7 +177,7 @@ export default function Services() {
 
       {/* CTA Section */}
       <AnimatedSection delay={0.2}>
-        <section className="py-20 bg-[#4169E1] dark:bg-[#2cf0c1]">
+        <section className="py-20 bg-[#4169E1] dark:bg-[#2aa48e]">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Ready to Get Started?

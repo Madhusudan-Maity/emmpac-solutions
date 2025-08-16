@@ -28,13 +28,13 @@ export default function HeroCollage() {
           <div className="animate-fade-in-up">
                          {/* Brand Logo with animation */}
              <div className="mb-6 animate-fade-in" style={{animationDelay: '0.3s'}}>
-               <div className="inline-flex items-center justify-center w-24 h-24 md:w-32 md:h-32 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-4 overflow-hidden">
+               <div className="inline-flex items-center justify-center w-auto h-auto bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 mb-4 p-2">
                  <Image
                    src="/images/logo.jpg"
                    alt="EMMPAC Solutions Logo"
-                   width={96}
-                   height={96}
-                   className="w-full h-full object-cover rounded-full"
+                   width={120}
+                   height={120}
+                   className="w-auto h-auto max-w-full object-contain"
                    priority
                  />
                </div>

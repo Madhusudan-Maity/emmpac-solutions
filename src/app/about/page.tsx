@@ -52,7 +52,7 @@ export default function About() {
     <main className="pt-20">
       {/* Hero Section */}
       <AnimatedSection>
-        <section className="bg-gray-100 dark:bg-gray-800 py-4 md:py-6">
+        <section className="bg-gray-100 dark:bg-gray-800 py-3 md:py-4">
           <div className="container mx-auto px-4">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-[#4169E1] dark:text-[#2cf0c1]">
               About EMMPAC Solutions
@@ -169,7 +169,7 @@ export default function About() {
 
       {/* CTA Section */}
       <AnimatedSection delay={0.4}>
-        <section className="py-20 bg-[#4169E1] dark:bg-[#2cf0c1]">
+        <section className="py-20 bg-[#4169E1] dark:bg-[#2aa48e]">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">
               Join Us in Building the Future
@@ -183,6 +183,26 @@ export default function About() {
             >
               Get in Touch
             </a>
+          </div>
+        </section>
+      </AnimatedSection>
+
+      {/* Company Registration */}
+      <AnimatedSection delay={0.45}>
+        <section className="py-12 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 max-w-3xl">
+            <h2 className="text-3xl font-bold mb-6 text-center text-[#4169E1] dark:text-[#2cf0c1]">Company Registration</h2>
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-lg">
+              <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                <li><strong>GST Number:</strong> 19AALFE245H1Z6</li>
+                <li><strong>TAN Number:</strong> CALE08382D</li>
+                <li>
+                  <strong>Registered Address:</strong>
+                  <div className="mt-1">Emmpac Building, Ranchi Road, Opp. Sainik School, Behind Gorain Hotel,</div>
+                  <div>Post: Raghabpur, Purulia - 723149</div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
       </AnimatedSection>

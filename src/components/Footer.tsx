@@ -26,10 +26,10 @@ const footerSections: FooterSection[] = [
   {
     title: 'Services',
     links: [
-      { name: 'Civil Construction', href: '/services#civil' },
-      { name: 'Electrical Works', href: '/services#electrical' },
-      { name: 'Documentary', href: '/services#documentary' },
-      { name: 'Interior Design', href: '/services#interior' },
+      { name: 'Construction', href: '/services#construction' },
+      { name: 'Awareness Activities', href: '/services#awareness' },
+      { name: 'Media Production', href: '/services#media-production' },
+      { name: 'Event Management', href: '/services#event-management' },
     ],
   },
   {

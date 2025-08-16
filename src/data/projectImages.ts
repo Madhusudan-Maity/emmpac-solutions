@@ -15,7 +15,7 @@ export const clientWorkImages: ProjectImage[] = [
     id: 'construction-1',
     src: '/images/projects/commercial-building.jpg',
     alt: 'Modern commercial building construction',
-    title: 'Commercial Complex Development',
+    title: 'Commercial Development',
     category: 'Construction',
     description: 'State-of-the-art commercial complex with sustainable design and modern amenities.',
     client: 'ABC Developers',
@@ -51,35 +51,57 @@ export const clientWorkImages: ProjectImage[] = [
     client: 'TechCorp Solutions',
     year: '2023'
   },
-  {
-    id: 'training-2',
-    src: '/images/projects/workshop.jpg',
-    alt: 'Interactive workshop session',
-    title: 'Leadership Workshop',
-    category: 'Training',
-    description: 'Interactive leadership development workshop for senior executives.',
-    client: 'Global Industries',
-    year: '2023'
-  },
-  {
-    id: 'media-1',
-    src: '/images/projects/documentary.jpg',
-    alt: 'Documentary production still',
-    title: 'Environmental Documentary',
-    category: 'Media Production',
-    description: 'Award-winning documentary on environmental conservation and sustainability.',
-    client: 'EcoVision Network',
-    year: '2023'
-  },
-  {
+
+    {
     id: 'media-2',
-    src: '/images/projects/short-film.jpg',
+    src: '/images/projects/media.jpg',
     alt: 'Short film production',
-    title: 'Short Film Production',
+    title: 'Media Production',
     category: 'Media Production',
     description: 'Creative short film showcasing local culture and traditions.',
     client: 'Cultural Arts Foundation',
     year: '2023'
+  }
+  ,
+  {
+    id: 'event-1',
+    src: '/images/projects/event-management.jpg',
+    alt: 'Event management and seminar',
+    title: 'Festival & Event Management',
+    category: 'Media Production',
+    description: 'Large scale festival management and film event logistics.',
+    client: 'Regional Film Festival',
+    year: '2024'
+  },
+  {
+    id: 'consultancy-1',
+    src: '/images/projects/work7.jpg',
+    alt: 'Third party inspection and consultancy',
+    title: 'Technical Consultancy & Audit',
+    category: 'Construction',
+    description: 'Third-party technical audits and QA/QC services for infrastructure projects.',
+    client: 'City Infra Ltd',
+    year: '2024'
+  },
+  {
+    id: 'waterproofing-1',
+    src: '/images/projects/waterproofing.jpg',
+    alt: 'Waterproofing and retrofitting work',
+    title: 'Waterproofing & Retrofit',
+    category: 'Construction',
+    description: 'Seamless waterproofing and structural retrofitting for commercial building.',
+    client: 'Sunrise Developers',
+    year: '2022'
+  },
+  {
+    id: 'lightning-1',
+    src: '/images/projects/residential-project.jpg',
+    alt: 'Lightning protection system installation',
+    title: 'Lightning Protection Installation',
+    category: 'Construction',
+    description: 'Design and earthing system installation for residential towers.',
+    client: 'Green Homes',
+    year: '2024'
   }
 ];
 

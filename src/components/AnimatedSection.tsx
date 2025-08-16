@@ -7,9 +7,11 @@ interface AnimatedSectionProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  // When true, render the section as visible immediately (skip intersection observer)
+  alwaysVisible?: boolean;
 }
 
-export default function AnimatedSection({ children, className = '', delay = 0 }: AnimatedSectionProps) {
+export default function AnimatedSection({ children, className = '', delay = 0, alwaysVisible = false }: AnimatedSectionProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -28,11 +30,13 @@ export default function AnimatedSection({ children, className = '', delay = 0 }:
     },
   };
 
+  const shouldShow = alwaysVisible || inView;
+
   return (
     <motion.div
       ref={ref}
-      initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
+      initial={shouldShow ? 'visible' : 'hidden'}
+      animate={shouldShow ? 'visible' : 'hidden'}
       variants={variants}
       className={className}
     >
