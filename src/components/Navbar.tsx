@@ -2,10 +2,22 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { clientWorkImages } from '../data/projectImages';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false);
+
+  // derive menu items from data
+  const serviceCategories = Array.from(new Set(clientWorkImages.map(i => i.category)));
+  const featuredProjects = clientWorkImages.slice(0, 6);
+
+  // helper to slugify labels into simple routes
+  const slugify = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,12 +51,93 @@ export default function Navbar() {
             <Link href="/about" className="text-white hover:text-yellow-300 transition-colors">
               About
             </Link>
-            <Link href="/services" className="text-white hover:text-yellow-300 transition-colors">
-              Services
-            </Link>
-            <Link href="/projects" className="text-white hover:text-yellow-300 transition-colors">
-              Projects
-            </Link>
+
+            {/* Services dropdown (desktop) */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button
+                className="text-white hover:text-yellow-300 transition-colors flex items-center gap-2"
+                aria-expanded={isServicesOpen ? 'true' : 'false'}
+                aria-haspopup="true"
+                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setIsServicesOpen(v => !v);
+                  }
+                  if (e.key === 'Escape') setIsServicesOpen(false);
+                }}
+              >
+                Services
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isServicesOpen && (
+                <div className="absolute right-0 mt-2 w-56 bg-white rounded-md shadow-2xl ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="py-2">
+                    {serviceCategories.map(cat => (
+                      <Link
+                        key={cat}
+                        href={`/services/${slugify(cat)}`}
+                        className="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {cat}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Projects dropdown (desktop) */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsProjectsOpen(true)}
+              onMouseLeave={() => setIsProjectsOpen(false)}
+            >
+              <button
+                className="text-white hover:text-yellow-300 transition-colors flex items-center gap-2"
+                aria-expanded={isProjectsOpen ? 'true' : 'false'}
+                aria-haspopup="true"
+                onClick={() => setIsProjectsOpen(!isProjectsOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setIsProjectsOpen(v => !v);
+                  }
+                  if (e.key === 'Escape') setIsProjectsOpen(false);
+                }}
+              >
+                Projects
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {isProjectsOpen && (
+                <div className="absolute right-0 mt-2 w-64 bg-white rounded-md shadow-2xl ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="py-2">
+                    {featuredProjects.map(p => (
+                      <Link
+                        key={p.id}
+                        href={`/projects/${p.id}`}
+                        className="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100"
+                        onClick={() => setIsProjectsOpen(false)}
+                      >
+                        {p.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link href="/contact" className="text-white hover:text-yellow-300 transition-colors">
               Contact
             </Link>
@@ -56,6 +149,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-yellow-300 focus:outline-none"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen ? 'true' : 'false'}
             >
               <svg
                 className="h-6 w-6"
@@ -106,20 +200,49 @@ export default function Navbar() {
             >
               About
             </Link>
-            <Link
-              href="/services"
-              className="block px-3 py-2 text-white hover:text-yellow-300 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/projects"
-              className="block px-3 py-2 text-white hover:text-yellow-300 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Projects
-            </Link>
+            {/* Mobile Services expandable */}
+            <div className="px-3">
+              <button
+                className="w-full text-left flex items-center justify-between px-3 py-2 text-white hover:text-yellow-300 transition-colors"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                aria-expanded={mobileServicesOpen ? 'true' : 'false'}
+              >
+                <span>Services</span>
+                <svg className={`w-4 h-4 transform ${mobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {mobileServicesOpen && (
+                <div className="pl-4">
+                  <Link href="/services/commercial" className="block px-3 py-2 text-white hover:text-yellow-300" onClick={() => setIsMenuOpen(false)}>Commercial</Link>
+                  <Link href="/services/residential" className="block px-3 py-2 text-white hover:text-yellow-300" onClick={() => setIsMenuOpen(false)}>Residential</Link>
+                  <Link href="/services/waterproofing" className="block px-3 py-2 text-white hover:text-yellow-300" onClick={() => setIsMenuOpen(false)}>Waterproofing</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Projects expandable */}
+            <div className="px-3">
+              <button
+                className="w-full text-left flex items-center justify-between px-3 py-2 text-white hover:text-yellow-300 transition-colors"
+                onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
+                aria-expanded={mobileProjectsOpen ? 'true' : 'false'}
+              >
+                <span>Projects</span>
+                <svg className={`w-4 h-4 transform ${mobileProjectsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {mobileProjectsOpen && (
+                <div className="pl-4">
+                  <Link href="/projects/commercial-building" className="block px-3 py-2 text-white hover:text-yellow-300" onClick={() => setIsMenuOpen(false)}>Commercial Building</Link>
+                  <Link href="/projects/residential-project" className="block px-3 py-2 text-white hover:text-yellow-300" onClick={() => setIsMenuOpen(false)}>Residential Project</Link>
+                  <Link href="/projects/event-management" className="block px-3 py-2 text-white hover:text-yellow-300" onClick={() => setIsMenuOpen(false)}>Event Management</Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/contact"
               className="block px-3 py-2 text-white hover:text-yellow-300 transition-colors"
@@ -132,4 +255,4 @@ export default function Navbar() {
       )}
     </nav>
   );
-} 
+}

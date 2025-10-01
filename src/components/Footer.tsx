@@ -88,7 +88,16 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Developed by Madhusudan Maity. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Developed by{' '}
+            <a
+              href="mailto:madmadhu64@gmail.com?subject=Contact%3A%20Developer%20Madhusudan%20Maity"
+              className="underline hover:text-white"
+            >
+              Madhusudan Maity
+            </a>
+            . All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

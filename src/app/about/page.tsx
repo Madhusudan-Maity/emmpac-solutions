@@ -9,18 +9,6 @@ const team = [
     role: 'CEO & Founder',
     image: '/images/surya_ceo.jpeg',
     bio: 'With 15 years of experience in this industry, Surya leads our company with vision and expertise.'
-  },
-  {
-    name: 'Jane Smith',
-    role: 'Technical Director',
-    image: '/team/technical.jpg',
-    bio: 'Jane brings extensive technical knowledge and innovative solutions to our projects.'
-  },
-  {
-    name: 'Mike Johnson',
-    role: 'Project Manager',
-    image: '/team/project.jpg',
-    bio: 'Mike ensures smooth project execution and client satisfaction through effective management.'
   }
 ];
 
@@ -124,9 +112,9 @@ export default function About() {
         <section className="py-20 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center text-[#4169E1] dark:text-[#2cf0c1]">
-              Our Leadership Team
+              Our Leadership 
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
               {team.map((member, index) => (
                 <AnimatedSection key={index} delay={0.4 + index * 0.1}>
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
