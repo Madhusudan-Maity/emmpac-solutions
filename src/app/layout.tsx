@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   description: "Best Professional video production and multimedia services provider in west bengal"
   ,
   icons: {
-    icon: "/images/favicon.ico",
-    shortcut: "/images/favicon.ico",
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
   },
 };
 
