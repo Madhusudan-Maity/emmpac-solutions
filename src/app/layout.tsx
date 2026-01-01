@@ -4,6 +4,7 @@ import "./globals.css";
 import JumpToTop from "@/components/JumpToTop";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,9 +59,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="en">
       <body className={inter.className}>
+        {gaId && <GoogleAnalytics gaId={gaId} />}
         <Navbar />
         <div className="flex-grow">
           {children}

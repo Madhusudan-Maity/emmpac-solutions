@@ -109,6 +109,7 @@ URL: https://emmpacsolutions.com/sitemap.xml
 ### 4. Connect Google Analytics (Optional but Recommended)
 - If you use Google Analytics, link it to Search Console
 - Get more detailed insights
+- **See detailed guide**: `GOOGLE_ANALYTICS_SETUP.md` for step-by-step instructions
 
 ## Expected Timeline
 
