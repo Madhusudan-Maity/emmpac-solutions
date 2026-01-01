@@ -50,8 +50,7 @@ export default function About() {
               About EMMPAC Solutions
             </h1>
             <p className="text-lg md:text-xl text-center text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-              Building a sustainable future through innovation and excellence
-            </p>
+            Building Infrastructure with Responsibility and Engineering Excellence            </p>
           </div>
         </section>
       </AnimatedSection>
@@ -66,18 +65,13 @@ export default function About() {
               </h2>
               <div className="prose prose-lg dark:prose-invert mx-auto">
                 <p className="text-gray-700 dark:text-gray-300 mb-6">
-                  EMMPAC Solutions was founded with a vision to revolutionize the construction and training industry. 
-                  Our journey began with a simple yet powerful idea: to create sustainable, innovative solutions that 
-                  make a positive impact on society.
+                Good infrastructure forms the backbone of national development and directly impacts the quality of life of people. EMMPAC Solutions was established by a group of engineers, entrepreneurs, and professionals who recognized the growing need for scientifically executed construction practices, modern engineering methods, and accountability in infrastructure development.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 mb-6">
-                  Today, we stand as a leading provider of construction services, training programs, and media production, 
-                  serving clients across various sectors. Our commitment to excellence and innovation has helped us build 
-                  a reputation for delivering exceptional results.
+                We believe construction is not merely execution—it is responsibility. Every project we undertake is approached with technical understanding, detailed analysis, and a long-term vision for safety, durability, and public value.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  As we continue to grow, we remain dedicated to our core values and mission of creating a better future 
-                  through sustainable development and knowledge sharing.
+                With decades of collective experience, our team works closely with clients—from grassroots stakeholders to senior administrative authorities—to deliver customized and practical engineering solutions.
                 </p>
               </div>
             </div>

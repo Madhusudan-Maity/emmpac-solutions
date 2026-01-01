@@ -51,8 +51,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">EMMPAC Solutions</h3>
             <p className="text-gray-400 mb-4">
-              Your trusted partner in construction and infrastructure development.
-            </p>
+            Complete Glee Under One Roof            </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
                 <FacebookIcon className="w-6 h-6" />

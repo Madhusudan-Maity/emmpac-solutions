@@ -42,18 +42,16 @@ export default function HeroCollage() {
 
             {/* Main Heading with enhanced shadow */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white drop-shadow-2xl animate-fade-in-up" style={{animationDelay: '0.5s'}}>
-              EMMPAC SOLUTIONS
-            </h1>
+              EMMPAC SOLUTIONS  </h1>
             
             {/* Subtitle with animation */}
             <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl mb-8 text-gray-100 drop-shadow-lg max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{animationDelay: '0.7s'}}>
-              Complete Glee Under One Roof
+            Construction & Infrastructure Solutions Company
             </p>
 
             {/* Description with animation */}
             <p className="text-base md:text-lg text-gray-200 drop-shadow-md max-w-2xl mx-auto mb-10 opacity-90 animate-fade-in-up" style={{animationDelay: '0.9s'}}>
-              Transforming visions into reality through construction, training, and media production excellence
-            </p>
+            Delivering reliable construction, consultancy, inspection, and specialized engineering solutions with a commitment to quality, safety, and sustainable development.            </p>
 
             {/* CTA Buttons with enhanced animations */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{animationDelay: '1.1s'}}>
