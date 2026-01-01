@@ -1,15 +1,19 @@
-'use client';
-
 import AnimatedSection from '@/components/AnimatedSection';
 import Image from 'next/image';
 
 const team = [
   {
+    name: 'Kabir Kalim',
+    role: 'Co-Founder & Director',
+    image: '',
+    bio: 'Kabir brings project management skills and an eye for detail, ensuring every initiative runs smoothly.'
+  },
+  {
     name: 'Surya Kanta Mahata',
-    role: 'CEO & Founder',
-    image: '/images/surya_ceo.jpeg',
-    bio: 'With 15 years of experience in this industry, Surya leads our company with vision and expertise.'
-  }
+    role: 'Technical Member',
+    image: '',
+    bio: 'Surya brings technical expertise and a passion for innovation, driving our projects forward with precision and efficiency.'
+  },
 ];
 
 const values = [
@@ -127,9 +131,6 @@ export default function About() {
                             width={300}
                             height={192}
                             className="w-full h-full object-cover"
-                            onError={() => {
-                              // Fallback handled by Next.js automatically
-                            }}
                           />
                         ) : (
                           <span className="text-4xl">👤</span>

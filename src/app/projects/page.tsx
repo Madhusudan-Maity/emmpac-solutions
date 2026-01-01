@@ -1,5 +1,3 @@
-'use client';
-
 import AnimatedSection from '@/components/AnimatedSection';
 import ProjectGallery from '@/components/ProjectGallery';
 import { clientWorkImages } from '@/data/projectImages';

@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "EMMPAC Solutions",
-  description: "Professional video production and multimedia services"
+  description: "Best Professional video production and multimedia services provider in west bengal"
   ,
   icons: {
-    icon: "/images/logo.jpg",
-    shortcut: "/images/logo.jpg",
+    icon: "/images/favicon.ico",
+    shortcut: "/images/favicon.ico",
   },
 };
 

@@ -94,7 +94,7 @@ export default function Footer() {
               href="mailto:madmadhu64@gmail.com?subject=Contact%3A%20Developer%20Madhusudan%20Maity"
               className="underline hover:text-white"
             >
-              Madhusudan Maity
+              TechWithMad
             </a>
             . All rights reserved.
           </p>
