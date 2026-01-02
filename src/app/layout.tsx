@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
@@ -8,6 +8,11 @@ import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: {
@@ -22,8 +27,13 @@ export const metadata: Metadata = {
   creator: "EMMPAC Solutions",
   publisher: "EMMPAC Solutions",
   metadataBase: new URL("https://emmpacsolutions.com"),
-  // IMPORTANT: don't set a single canonical for the entire site here.
-  // Set canonicals per page instead.
+
+  // GSC Verification (Checklist #2)
+  // Set this in Vercel env vars as: NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
+
   openGraph: {
     title: "EMMPAC Solutions",
     description:
@@ -68,22 +78,37 @@ export default function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
+  // Structured Data (Checklist #3)
+  // Strengthens brand/entity signals for both "emmpac solutions" and "emmpacsolutions".
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "LocalBusiness"],
         "@id": "https://emmpacsolutions.com/#organization",
         name: "EMMPAC Solutions",
         alternateName: [
           "EMMPAC",
           "EmmpacSolutions",
           "EMMPACSolutions",
-          "emmpacsolutions", // exact no-space query
-          "emmpac solutions" // spaced variant (optional)
+          "emmpacsolutions",
+          "EMMPACSOLUTIONS",
+          "emmpac solutions",
         ],
         url: "https://emmpacsolutions.com",
         logo: "https://emmpacsolutions.com/images/logo.jpg",
+        email: "emmpacsolutions@gmail.com",
+        telephone: ["+918877000030", "+918116915768"],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress:
+            "Emmpac Building, Ranchi Road, Opp. Sainik School, Purulia",
+          addressLocality: "Purulia",
+          addressRegion: "West Bengal",
+          postalCode: "723149",
+          addressCountry: "IN",
+        },
+        areaServed: ["IN-WB", "IN-JH"],
       },
       {
         "@type": "WebSite",
@@ -91,11 +116,6 @@ export default function RootLayout({
         name: "EMMPAC Solutions",
         url: "https://emmpacsolutions.com",
         publisher: { "@id": "https://emmpacsolutions.com/#organization" },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: "https://emmpacsolutions.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string",
-        },
       },
     ],
   };

@@ -1,10 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://emmpacsolutions.com/sitemap.xml
-
-# Disallow API routes and internal paths
-Disallow: /api/
-Disallow: /_next/
 
