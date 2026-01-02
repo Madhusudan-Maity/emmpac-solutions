@@ -1,4 +1,12 @@
-import AnimatedSection from '@/components/AnimatedSection';
+import type { Metadata } from "next";
+import AnimatedSection from "@/components/AnimatedSection";
+
+export const metadata: Metadata = {
+  title: "Services",
+  alternates: { canonical: "/services" },
+  description:
+    "Explore EMMPAC Solutions services: construction & consultancy, structural health checks, waterproofing & retrofit, third-party inspection, training, media production, and more.",
+};
 
 const services = [
   {
@@ -98,7 +106,7 @@ const services = [
       'Logistics & On-ground Execution',
       'Stage & Technical Services'
     ],
-    icon: '�'
+    icon: '🎪'
   },
   {
     title: 'Waste Management',
@@ -194,4 +202,4 @@ export default function Services() {
       </AnimatedSection>
     </main>
   );
-} 
+}

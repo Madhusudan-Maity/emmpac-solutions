@@ -1,5 +1,13 @@
-import AnimatedSection from '@/components/AnimatedSection';
-import Image from 'next/image';
+import type { Metadata } from "next";
+import AnimatedSection from "@/components/AnimatedSection";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About",
+  alternates: { canonical: "/about" },
+  description:
+    "Learn about EMMPAC Solutions: our team, values, and commitment to responsible infrastructure and engineering excellence.",
+};
 
 const team = [
   {
@@ -191,4 +199,4 @@ export default function About() {
       </AnimatedSection>
     </main>
   );
-} 
+}

@@ -4,6 +4,14 @@ import Testimonials from '@/components/Testimonials';
 import ProjectGallery from '@/components/ProjectGallery';
 import HeroCollage from '@/components/HeroCollage';
 import { getFeaturedImages } from '@/data/projectImages';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  alternates: { canonical: "/" },
+  description:
+    "EMMPAC Solutions (emmpacsolutions) provides construction, consultancy, inspection, waterproofing, training, media production & event management services in West Bengal, India.",
+};
 
 export default function Home() {
   return (

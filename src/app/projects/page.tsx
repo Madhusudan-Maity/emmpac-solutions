@@ -1,6 +1,14 @@
-import AnimatedSection from '@/components/AnimatedSection';
-import ProjectGallery from '@/components/ProjectGallery';
-import { clientWorkImages } from '@/data/projectImages';
+import type { Metadata } from "next";
+import AnimatedSection from "@/components/AnimatedSection";
+import ProjectGallery from "@/components/ProjectGallery";
+import { clientWorkImages } from "@/data/projectImages";
+
+export const metadata: Metadata = {
+  title: "Projects",
+  alternates: { canonical: "/projects" },
+  description:
+    "View EMMPAC Solutions projects showcasing construction, consultancy, and delivery expertise across engagements.",
+};
 
 export default function Projects() {
   return (
@@ -20,7 +28,7 @@ export default function Projects() {
       </AnimatedSection>
 
       {/* Projects Gallery */}
-      <ProjectGallery 
+      <ProjectGallery
         images={clientWorkImages}
         title=""
         subtitle=""
@@ -35,7 +43,8 @@ export default function Projects() {
               Have a Project in Mind?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">
-              Let&apos;s discuss how we can help bring your vision to life with our expertise and experience.
+              Let&apos;s discuss how we can help bring your vision to life with
+              our expertise and experience.
             </p>
             <a
               href="/contact"
@@ -48,4 +57,4 @@ export default function Projects() {
       </AnimatedSection>
     </main>
   );
-} 
+}
